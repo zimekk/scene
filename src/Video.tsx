@@ -2,6 +2,10 @@ import {Composition} from 'remotion';
 import phone from './assets/phone.mp4';
 import tablet from './assets/tablet.mp4';
 import {Scene} from './Scene';
+import { GooBallCSS } from './GooBallCSS'
+import {GLTransitions} from './GLTransitions';
+
+const FPS = 30
 
 // Welcome to the Remotion Three Starter Kit!
 // Two compositions have been created, showing how to use
@@ -38,6 +42,25 @@ export const RemotionVideo: React.FC = () => {
 					baseScale: deviceType === 'phone' ? 1 : 1.8,
 				}}
 			/>
+			<Composition
+				id="GooBallCSS"
+				component={GooBallCSS}
+				durationInFrames={10 * FPS}
+				fps={FPS}
+				width={500}
+				height={500}
+      />		
+			<Composition
+				id="Directional"
+				component={GLTransitions}
+				durationInFrames={30}
+				fps={30}
+				width={1920}
+				height={1080}
+				defaultProps={{
+					name: 'Directional',
+				}}
+			/>		
 		</>
 	);
 };

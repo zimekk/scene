@@ -63,7 +63,7 @@ export const getPhoneLayout = (
 	const phoneBevel = baseScale * 0.04;
 
 	// The inner radius of the phone, aka the screen radius
-	const screenRadius = baseScale * 0.07;
+	const screenRadius = baseScale * 0.025;
 
 	const phoneHeight = getPhoneHeight(aspectRatio, baseScale);
 	const phoneWidth = getPhoneWidth(aspectRatio, baseScale);

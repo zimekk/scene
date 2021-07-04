@@ -4,7 +4,7 @@
 	"description": "A React Three Fiber Project",
 	"scripts": {
 		"start": "remotion preview src/index.tsx",
-		"build": "remotion render src/index.tsx Scene out.mp4",
+		"build": "remotion render src/index.tsx Scene out.mp4 && remotion render src/index.tsx GooBallCSS out1.mp4 && remotion render src/index.tsx Directional out2.mp4",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
 	},
@@ -19,6 +19,9 @@
 		"@types/react": "^17.0.0",
 		"@types/three": "^0.128.0",
 		"eslint": "^7.15.0",
+		"gl-texture2d": "^2.1.0",
+		"gl-transition": "^1.13.0",
+		"gl-transitions": "^1.43.0",
 		"prettier": "^2.2.1",
 		"prettier-plugin-organize-imports": "^1.1.1",
 		"react": "^17.0.2",
